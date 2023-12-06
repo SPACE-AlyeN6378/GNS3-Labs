@@ -27,5 +27,5 @@ git commit -m "%COMMIT_MESSAGE%"
 REM Push to GitHub (master branch)
 git push -u origin master
 
-echo "Upload to GitHub complete!"
+echo Upload to GitHub complete!
 pause
