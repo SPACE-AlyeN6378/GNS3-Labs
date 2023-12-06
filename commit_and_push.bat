@@ -16,6 +16,7 @@ REM git config --global user.email "%GIT_EMAIL%"
 
 REM Add GitHub repository as remote origin
 REM git remote add origin %GITHUB_REPO_URL%
+git remote -v
 
 REM Add all files to staging
 git add .
