@@ -1,0 +1,10 @@
+Dec 05 15:37:20.735 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 05 15:37:20.738 HYPERVISOR: Started on IP = localhost, TCP port = 63330.
+Dec 05 15:37:21.223 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 05 15:37:21.223 HYPERVISOR: exec_cmd: hypervisor working_dir D:\GNS3 Projects\OSPF\OSPF Prefix Suppresion\project-files\dynamips 
+Dec 05 15:37:21.305 GENERAL: working_dir=D:\GNS3 Projects\OSPF\OSPF Prefix Suppresion\project-files\dynamips
+Dec 05 15:37:21.305 HYPERVISOR: exec_cmd: ethsw create Switch1 
+Dec 05 15:37:24.273 HYPERVISOR: exec_cmd: ethsw delete Switch1 
+Dec 05 15:37:24.274 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 05 15:37:24.725 HYPERVISOR: Stopped.
+Dec 05 15:37:24.725 GENERAL: reset done.

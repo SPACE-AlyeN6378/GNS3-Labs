@@ -1,0 +1,16 @@
+<svg width="1236" height="264"><text font-family="TypeWriter" font-size="10.0" font-weight="bold" fill="#000000" fill-opacity="1.0">- All IP addresses have been preconfigured for you.
+The following loopback interfaces have been configured:
+HongKong: 1.1.1.1 /24
+Amsterdam: 2.2.2.2 /24
+Barcelona: 3.3.3.3 /24
+HongKong: Configure OSPF  (process-id 1) and advertise all networks by using a single network statement. Use area0
+Amsterdam: Configure OSPF (process-id 1) and advertise all networks by using 2 network statements, area0.
+Barcelona: Configure OSPF (process-id 1) and advertise all networks by using 3 network statements, area0.
+Optional: the loopback interfaces appear as /32’s in the routing table, make sure they appear as /24’s just as you configured them.
+Amsterdam: change the router-id to 22.22.22.22, make sure you see this change from Barcelona by using show commands.
+Traffic from Barcelona to HongKong should use the link between Amsterdam-Barcelona, use the cost command to achieve this.
+Remove the previous change with the cost-command, achieve the same goal by using the bandwidth command.
+Enable clear-text authentication between Amsterdam and HongKong. Use “vault” as a password.
+Enable MD5 authentication between Barcelona and HongKong. Use “Safe” as a password.
+Change the OSPF timers on the link between Amsterdam and Barcelona so hello packets are being sent every 5 seconds.
+The HongKong router will have access to the Internet in the future, you need to advertise a default route in OSPF so Amsterdam and Barcelona will send traffic for unknown networks to HongKong.</text></svg>
