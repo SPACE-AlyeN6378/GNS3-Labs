@@ -1,0 +1,3 @@
+int fa0/0
+ip ospf flood-reduction
+end
