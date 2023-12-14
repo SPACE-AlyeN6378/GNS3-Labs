@@ -9,4 +9,4 @@ Your MPLS Backbone works like a charm but your security officer still has some i
 - Configure MPLS on all routers, ensure all prefixes are advertised with a label.
 - The prefixes on the loopback interfaces should NOT be advertised with a label.
 
-[Topology](./mplsldpfiltering.jpg)
+![Topology](./mplsldpfiltering.jpg)
