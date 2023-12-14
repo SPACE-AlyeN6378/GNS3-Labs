@@ -8,3 +8,5 @@ Your MPLS Backbone works like a charm but your security officer still has some i
 - OSPF has been configured on all routers and all networks are advertised.
 - Configure MPLS on all routers, ensure all prefixes are advertised with a label.
 - The prefixes on the loopback interfaces should NOT be advertised with a label.
+
+[Topology](./mplsldpfiltering.jpg)
