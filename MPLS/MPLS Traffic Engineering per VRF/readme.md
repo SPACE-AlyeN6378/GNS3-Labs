@@ -1,28 +1,31 @@
 # MPLS Traffic Engineering per VRF
 
 ## Scenario
-You are the senior network engineer for a large MPLS provider based in the United Kingdom. 2 of your customers called ‚ÄúToy‚Äù and ‚ÄúArcade‚Äù would like to use your MPLS services to connect their HQ and branch offices. Your MPLS backbone has multiple routers and one of the problems you encounter is that there is no load-sharing within the MPLS cloud. You need to make sure you can offer your customers L3 services and that your MPLS backbone has traffic engineering so you can share the load on all routers‚Ä¶time for some tagging & tunneling!
 
-## Goal
-- All IP addresses have been preconfigured for you.
+You are the senior network engineer for a large MPLS provider based in the United Kingdom. 2 of your customers called ìToyî and ìArcadeî would like to use your MPLS services to connect their HQ and branch offices. Your MPLS backbone has multiple routers and one of the problems you encounter is that there is no load-sharing within the MPLS cloud. You need to make sure you can offer your customers L3 services and that your MPLS backbone has traffic engineering so you can share the load on all routersÖtime for some tagging & tunneling!
+
+
+### Topology:
+
+![Topology](./mplstrafficengvrf.png)
+
+
+## Tasks
+
 - Every router has a loopback0 interfaced configured.
 - Configure OSPF Area 0 at the provider side (Router PE1,PE2,P1,P2 and P3).
 - Advertise the loopback interfaces as well in OSPF.
-- Make sure you advertise the loopback0 interfaces as 24 instead of the default 32 or you will run into trouble.
+- Make sure you advertise the loopback0 interfaces as /24 instead of the default /32 or you will run into trouble.
 - Ensure you have full reachability in the OSPF domain.
 - Configure MPLS on all physical interfaces in the service provider domain, do not configure MPLS on physical interfaces pointing towards the customer.
-- Configure VRF ‚ÄúToy‚Äù on PE1 and PE2 as following:
-```
-RD 1001
-Route-target both 1100
-```
-- Configure VRF ‚ÄúArcade‚Äù on PE1 and PE2 as following:
-```
-RD 2001
-Route-target both 1200
-```
+- Configure VRF ìToyî on PE1 and PE2 as following:
+	* RD 100:1
+	* Route-target both 1:100
+- Configure VRF ìArcadeî on PE1 and PE2 as following:
+	* RD 200:1
+	* Route-target both 1:200
 - On router PE1 and PE2 add the interfaces pointing towards the customers to the VRFs you just created.
-- Ensure you can ping from within the VRF, try this as following on PE1
+- Ensure you can ping from within the VRF, try this as following on PE1:
 - ping vrf Toy 192.168.12.1
 - Configure OSPF Area 0 on router ToyHQ and ToyBranch. Advertise the loopbacks as well.
 - Configure EIGRP AS 2 on router ArcadeHQ and ArcadeBranch. Advertise the loopbacks as well.
@@ -43,3 +46,5 @@ Route-target both 1200
 - Configure MPLS traffic engineering tunnel support for all links interconnecting the P and PE routers.
 - Finish your configuration so traffic for customer Toy is sent from PE1 through P1 and P2.
 - Finish your configuration so traffic for customer Arcade is sent from PE1 through P3 and P2.
+
+

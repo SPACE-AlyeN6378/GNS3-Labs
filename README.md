@@ -39,8 +39,13 @@ Import the VM into your preferred virtualization software (e.g., VirtualBox, VMw
 Configure GNS3 to use the GNS3 VM by going to "Edit" -> "Preferences" -> "GNS3 VM" and selecting the imported VM.
 
 ### 4. Install Router Templates
-Navigate to the /router_templates directory within the cloned repository. I used Cisco 7200 for most of it, but some of them use 3640. I also used Cisco IOSvL2 for switches.
-Follow the documentation or README files in each template folder to install the router templates in GNS3.
+	1. First download the Cisco Router/Switch images here: [Download](https://drive.google.com/drive/folders/1FX-oMUTm_Z5Emj-GoUMYAqkNhRXfExU7?usp=drive_link)
+	2. In GNS3, open the Devices dock on the left click on "Add Template" at the bottom
+	3. Select the recommended option "Install an appliance from the GNS3 server" and hit Next
+	4. Select the appliance you have chosen, and click Next
+	5. Select the recommended option  (i.e. GNS3 VM) and hit Next
+	6. Once the required image you downloaded is found by GNS3, you're ready to install the appliance
+	7. And you're all set!
 
 ### 5. Start Simulations
 With the configurations loaded and router templates installed, you are ready to start your GNS3 simulations. Have fun experimenting with different network scenarios!

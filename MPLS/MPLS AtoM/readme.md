@@ -3,6 +3,9 @@
 ## Scenario:
 One of the largest service providers in The Netherlands has been succesfully implementing MPLS in their backbone. The last years they have been serving customers with PE-CE setups without any problem. Yesterday a new customer specialized in selling Bananas arrived who is not looking for a PE-CE solution but rather would see an end-to-end Ethernet solution. Since the ISP has never configured this before they ask you; A respected Cisco Guru to implement MPLS AtoM (Any Type over MPLS) for them. Let’s see if you can pull this one off!
 
+### Topology:
+![Topology](./mplsatomeompls.jpg)
+
 ## Goal:
 - All IP addresses have been preconfigured for you.
 - All ISP routers have a loopback0 interfaced configured as following:
